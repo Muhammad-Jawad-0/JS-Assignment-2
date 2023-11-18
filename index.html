@@ -4,6 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JS Assignment 2</title>
+    <style>
+        table {
+          border-collapse: collapse;
+          width: 100%;
+        }
+    
+        th, td {
+          border: 1px solid #ddd;
+          padding: 8px;
+          text-align: left;
+        }
+    
+        th {
+          background-color: #f2f2f2;
+        }
+    
+        button {
+          background-color: #ff0000;
+          color: #fff;
+          border: none;
+          border-radius: 5rem;
+          padding: 5px 10px;
+          cursor: pointer;
+        }
+
+        input {
+          border-radius: 1rem;
+          padding: 5px 10px;
+          background-color: aquamarine;
+        }
+      </style>
+
+      <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        button {
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
 
@@ -57,6 +109,171 @@
 <button onclick="Calculator()">Run</button>
 <p id="ans"></p> -->
 
+<!-- // -------------------------------- Chapter 43 to 48 ----------------------------------
+
+// ---------------------EVENTS -->
+<!-- 
+----Q1. Show an alert box on click on a link.
+----Q2. Display some Mobile images in browser. On click on an
+image Show the message in alert to user. -->
+
+<!-- <h2>Mobile Images</h2> -->
+
+  <!-- <img src="./assets/iphone 11.jpeg" alt="Mobile 1" onclick="showAlert('Mobile 1 clicked')" width="20%">
+  <img src="./assets/iphone12.jpeg" alt="Mobile 2" onclick="showAlert('Mobile 2 clicked')" width="20%">
+  <img src="./assets/IPHONE-15.jpg" alt="Mobile 3" onclick="showAlert('Mobile 3 clicked')" width="20%"> -->
+
+
+  <!-- -----Q3. Display 10 student records in table and each row should contain a delete
+  button. If you click on a button to delete a record, entire row should be
+  deleted. -->
+<!-- 
+  <h2>Index Name Class</h2>
+  <table>
+    <thead>
+        <tr>
+            <th>Roll No</th>
+            <th>Name</th>
+            <th>Garde</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>Jawad</td>
+            <td>A</td>
+            <td><button onclick="deleteRow(this)">Delete</button></td>
+        </tr>
+
+        <tr>
+            <td>2</td>
+            <td>asad</td>
+            <td>A1</td>
+            <td><button onclick="deleteRow(this)">Delete</button></td>
+        </tr>
+
+        <tr>
+            <td>3</td>
+            <td>Hammad</td>
+            <td>B</td>
+            <td><button onclick="deleteRow(this)">Delete</button></td>
+        </tr>
+
+        <tr>
+            <td>4</td>
+            <td>Umar</td>
+            <td>A</td>
+            <td><button onclick="deleteRow(this)">Delete</button></td>
+        </tr>
+    </tbody>
+  </table> -->
+
+<!-- Q4. Display an image in browser. Change the picture on mouseover and set the
+first picture on mouseout. -->
+
+<!-- <h2>Image Change On Hover</h2>
+
+<img id="hoverImage" src="./assets/img1.jpeg" alt="Image" onmouseover="changeImage('./assets/img2.jpeg')" onmouseout="changeImage('./assets/img1.jpeg')"> -->
+
+
+<!-- Q5. Show a counter in browser. Counter should increase on click on increase
+button and decrease on click on decrease button. And show updated counter
+value in browser. -->
+
+<!-- <h2>Counter Display</h2>
+
+<p id="counterDisplay">0</p>
+<button onclick="incrementCounter()">Increase</button>
+<button onclick="decrementCounter()">Decrease</button> -->
+
+<!-- 
+// -------------------------------- Chapter 49 to 52 ----------------------------------
+
+// ---------------------EVENTS -->
+
+<!-- // Q1. Create a signup form and display form data in your web
+// page on submission. -->
+
+<!-- <h2>Signup Form</h2>
+
+<form id="signForm" onsubmit="displayFormData(event)">
+<label for="name">Name :</label>
+<input type="text" name="name" id="name" required> <br>
+
+<label for="email">Email :</label>
+<input type="email" name="email" id="email"> <br>
+
+<label for="password">Password :</label> <br>
+<input type="password" name="password" id="password"> <br>
+
+<button type="submit">Submit</button>
+</form>
+
+<div id="formDataDisplay"></div> -->
+
+
+<!-- Q2. Suppose in your webpage there is content area in which
+you have entered your item details, but user can only see
+some details on first look. When user clicks on “Read
+more” button, full detail of that particular item will be
+displayed. -->
+
+<!-- <h2>Items Details</h2>
+
+<div class="itemDetails">
+  <p><strong>Title :</strong> product Title</p>
+  <p><strong>Price :</strong> $10</p>
+  <p><strong>Discription :</strong>  This is a brief description of the product. <span id="extraDetail" style="display: none;"> Additional details about the product that are initially hidden. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et luctus felis.</span></p>
+  <button onclick="toggleDetails()">Read More</button>
+</div> -->
+
+<!-- 
+Q3. In previous assignment you have created a tabular data
+using javascript. Let’s modify that. Create a form which
+takes student’s details and show each student detail in
+table. Each row of table must contain a delete button and
+an edit button. On click on delete button entire row should
+be deleted. On click on edit button, a hidden form will
+appear with the values of that row. -->
+
+<!-- <h2>Student Data Details</h2>
+
+<form id="studentForm">
+  <label for="name">Name :</label>
+  <input type="text" id="name" required>
+
+  <label for="age">Age :</label>
+  <input type="number" id="age" required>
+
+  <label for="grade">Grade :</label>
+  <input type="text" id="grade" required>
+
+  <button type="button" onclick="addStudent()">Add Student</button>
+</form>
+
+<table id="studentTable">
+  <tr>
+    <td>Name</td>
+    <td>Age</td>
+    <td>Grade</td>
+    <td>Action</td>
+  </tr>
+</table> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -69,6 +286,17 @@
     <!-- <script src="chp 26to30.js"></script> -->
     <!-- <script src="chp 31to34.js"></script> -->
     <!-- <script src="chp 35to38.js"></script> -->
-    <script src="chp 38to42.js"></script>
+    <!-- <script src="chp 38to42.js"></script> -->
+    <!-- <script src="chp 43to48.js"></script> -->
+    <script src="chp 49to52.js"></script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
